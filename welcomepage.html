@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Welcome &nbsp;<span id="player" style="text-transform: capitalize;"></span></h1>
+    <script>
+        alert("Login Successfully")
+        var x=JSON.parse(localStorage.getItem("USER"))
+        console.log(x)
+        document.getElementById("player").innerHTML=x.username
+    </script>
+</body> 
+</html>

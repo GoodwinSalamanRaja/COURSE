@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.edexflu{
+    background: radial-gradient(circle at 30% 90%, #fdf497 0%, #fdf497 10%, #fd5949 45%,#d6249f 60%,#285AEB 90%);;
+}
+.offcanvas-body{
+    background: radial-gradient(circle at 30% 90%, #fdf497 0%, #fdf497 10%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+@media only screen and (max-width:555px){
+    .education{
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width:556px) and (max-width:768px){
+    .education{
+        font-size: 40px;
+    }
+}
+@media only screen and (min-width:768px) and (max-width:1000px) {
+    .education{
+        font-size: 55px;
+    }
+}
+@media only screen and (min-width:1001px){
+    .education{
+        font-size: 69px;
+    }
+}
+.imgflu{
+    background-image: url('https://themewagon.github.io/course/images/slider_background.jpg');
+    background-size: cover;
+    height: 90vh;
+    filter: brightness(111%);
+}
+.box1{
+    height: 195px;
+    color: white;
+}
+.box1 .people{
+    color:  rgb(255,182,6);
+}
+.box1 :hover{
+    background-color: rgb(255,182,6);
+    color: white;
+}
+/* .box1 :active{
+    transform: rotateY(320deg);
+} */
+@media only screen and (max-width:1000px){
+    .imgflu{
+        height: 170vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+}
+/* .people{
+    color: rgb(255,182,6);
+}
+.people:hover{
+    color: white;
+} */
+.getrow{
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+.navbar-nav li a::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    transition: width 0.3s ease-in;
+}
+.navbar-nav li a:hover::after{
+    background-color: black;
+    width: 16%;
+}
+/* .navbar-nav div button::before{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 100%;
+    transform: scaleX(0);
+    transition: width 1s ease-in;
+}
+.navbar-nav div button:hover::before{
+    background-color: black;
+    transform: scaleX(1.1);
+    width: 100%;
+} */
+@media only screen and (max-width:500px){
+    .video{
+        position: absolute;
+        top: 35%;
+        left: 50%;
+    }
+    #range{
+        position: absolute;
+        left: 1px;
+    }
+}
+@media only screen and (min-width:501px) and (max-width:1000px){
+    .video{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+    }
+}
+@media only screen and (min-width:1001px){
+    .video{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+    }
+}
+.price{
+    background-color: rgb(246,246,246);
+}
+#range{
+    position: absolute;
+    left: 80px;
+}
+@media only screen and (max-width:500px){
+    #range{
+        position: absolute;
+        left: 5px;
+    }
+}
+@media only screen and (min-width:501px) and (max-width:900px) {
+    #range{
+        position: absolute;
+        left: 20px;
+    }
+}
+.imgcaro{
+    transform: scale(0.7);
+    transition: transform 5s linear;
+}
+.imgcaro :hover{
+    transition: 1s;
+    transform: scale(1.2);
+} 
+/* .hover-effect {
+    transition: background-color 0.3s ease;
+}
+
+.hover-effect :hover {
+    background-color: black;
+} */
+.fb .twid{
+    color: rgb(162,162,162);
+}
+.fb .twid :hover{
+    color: aqua;
+}
+.card1{
+    overflow: hidden;
+}
+.card1 img{
+    transition: transform 0.3s ease-in;
+}
+.card1 img:hover{
+    transform: scale(1.2);
+}
+.stuimg1{
+    background-image: url("https://themewagon.github.io/course/images/testimonials_background.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: right center;
+    /* filter: blur(0.5px); */
+    /* filter: brightness(150%); */
+    /* filter: grayscale(20%); */
+}
+.stuimg2{
+    background-image: url("https://media.istockphoto.com/id/486024121/photo/multi-ethnic-businesswoman.jpg?s=612x612&w=0&k=20&c=VA_YHUaKtyXVLLyt05dgEO_2l2jGFZnJ4slliIaUHd8=");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right right;
+}
+.stuimg3{
+    background-image: url("https://img.freepik.com/free-photo/young-happy-businesswoman-working-desktop-pc-communicating-mobile-phone-office_637285-5320.jpg?w=1060&t=st=1698068364~exp=1698068964~hmac=17889e3013ad7c17fb84af4c00c4a295ebbd555ac4a7e8d4df4afed11da4e58c");
+    height: 100vh;
+    opacity: 0.57;
+    background-size: cover;
+    background-position: right right;
+}  
+@media only screen and (min-width:950px){
+    .sturev1{
+        margin-left: 190px;
+    }
+    .sturev2{
+        margin-left: 450px;
+    }
+    .sturev3{
+        margin-left: 600px;
+    }
+    .dp{
+        margin-left: 400px;
+    }
+}
+.profile{
+    filter: brightness(100%);
+}
+.btndiv .btn{
+    border: 1px solid violet;
+}
+.btndiv .btn:hover::before {
+    transform: scaleX(1);
+    z-index: -1;
+}
+.btndiv .btn::before {
+    content: "";
+    position: absolute;
+    left: 196px;
+    bottom: 0;
+    width: 39%;
+    height: 14%;
+    background-color: violet;
+    z-index: 1;
+    border-radius: 40px;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+}
+.foot{
+    color: rgb(162,162,162);
+}
+.foot:hover{
+    color: rgb(255,182,6);
+}
+.footicon :hover{
+    color: rgb(255,182,6);
+    transition: transform 2s;
+    transform: scale(1.5);
+}
+.mail :hover{
+    text-decoration: underline;
+}
+
+

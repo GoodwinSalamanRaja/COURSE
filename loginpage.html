@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        fieldset{
+            background-color: aqua;
+        }
+        span{
+            margin-top: -18px;
+            background-color: salmon;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        div{
+            font-size: 19px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        div > input{
+            height: 31px;
+            width: 32%;
+            border-radius: 9px;
+            border: none; 
+            text-align: center;
+            font-size: 15px;
+        }
+        body{
+            background-image: url("https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg");
+            /* background-color: black; */
+            /* background-repeat: no-repeat; */
+            /* background-size: cover; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+     <div class="container">
+       <form name="myform" onsubmit="return formvalidation()" target="_blank" class="d-flex justify-content-center mt-5 pt-5">
+         <fieldset class="w-50 h-100 text-capitalize text-center rounded-3">
+                <div class="d-flex justify-content-center">
+                  <span class="fw-bold fs-3 ps-3 pe-3 rounded-3">Login form</span>
+                </div><br><br>
+                <div class="row d-flex flex-column">
+                    <div class="col">
+                      <label>first name</label><br>
+                      <input type="text" name="fname1">
+                      <p id="required1"></p>
+                    </div>
+                    <div class="col">
+                      <label>last name</label><br>
+                      <input type="text" name="fname2">
+                      <p id="required2"></p>
+                    </div>
+                    <div class="col">
+                      <label>username</label><br> 
+                      <input type="text" name="fname3">
+                      <p id="required3"></p>
+                    </div>
+                    <div class="col">
+                       <label>password</label><br>
+                       <input type="password" name="fpassword">
+                       <p id="required4"></p>
+                    </div>
+                    <div class="col">
+                       <label>contact</label><br>
+                       <input type="number" name="fcontact">
+                       <p id="required5"></p>
+                    </div>
+                    <div class="text-center mt-3 pb-3">
+                       <input type="submit" value="submit" class="text-uppercase text-white fs-5 rounded-3 fw-bold" style="background-color: violet;width: 99px;height: 32px;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                    </div>
+                </div>
+           </fieldset>
+          </form>
+         </div>
+        </div>
+<script>
+   let x1=document.getElementById("required1")
+   let x2=document.getElementById("required2")
+   let x3=document.getElementById("required3")
+   let x4=document.getElementById("required4")
+   let x5=document.getElementById("required5")
+   function formvalidation(){
+       let fname=document.forms["myform"]["fname1"].value
+       let lname=document.forms["myform"]["fname2"].value
+       let name=document.forms["myform"]["fname3"].value
+       let fpass=document.forms["myform"]["fpassword"].value
+       let fcon=document.forms["myform"]["fcontact"].value
+       console.log(fname,lname,name,fpass,fcon)
+       var current_user={
+           firstname:fname,
+           lastname:lname,
+           username:name,
+           password:fpass,
+           contact:fcon
+       }
+       if(fname==""||lname==""||name==""||fpass==""||fcon==""){
+           if(fname==""){
+               x1.innerHTML="Required"
+               x1.style.color="red"
+               return false
+           }
+           else{
+               x1.innerHTML=""
+           }
+           if(lname=="")
+           {
+               x2.innerHTML="Required"
+               x2.style.color="red"
+               return false
+           }
+           else{
+               x2.innerHTML="" 
+           }
+           if(name=="")
+           {
+               x3.innerHTML="Required"
+               x3.style.color="red"
+               return false
+           }
+           else if(name.length<=8){
+               x3.innerHTML="Username Must Exceeds eight character"
+               x3.style.color="red"
+               return false
+           }
+           else if(name.length>=8){
+               x3.innerHTML=""
+           }
+           if(fpass=="")
+           {
+               x4.innerHTML="Required"
+               x4.style.color="red"
+               return false
+           }
+           if(fpass.length<=8){
+               x4.innerHTML="Password Cannot Be Less Than eight character"
+               x4.style.color="red"
+               return false
+           } 
+           else if(fpass.length>=8){
+               x4.innerHTML=""
+           }
+           if(fcon=="")
+           {
+               x5.innerHTML="Required"
+               x5.style.color="red"
+               return false
+           }
+           else{
+               x5.innerHTML=""
+           } 
+       }
+       else{
+           window.open("welcomepage.html","_blank")
+           localStorage.setItem("USER",JSON.stringify(current_user))
+           return false
+       }
+    }
+</script>
+</body>  
+</html>
